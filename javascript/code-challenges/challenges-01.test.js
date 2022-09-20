@@ -1,5 +1,7 @@
 'use strict';
 
+const { name } = require("mustache");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -87,11 +89,14 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  for (let i = 1; i <= times; i++) {
+    arr.push(num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +118,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let shoplist = [];
+  availableItems.forEach((v, i) => {
+    if (this.available === true) {
+      shoplist.push(this.name);
+    }
+  });
+  return shoplist;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -176,7 +187,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
   test('It should only add the available items to the list', () => {
