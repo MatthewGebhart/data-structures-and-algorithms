@@ -7,16 +7,15 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-// let longest = -1;
-let longest = [];
-arr.map((v) => {
-  if (v.length > longest.length) {
-    longest = v;
-  }
-});
-return arr.indexOf(longest);
+  // let longest = -1;
+  let longest = [];
+  arr.map((v) => {
+    if (v.length > longest.length) {
+      longest = v;
+    }
+  });
+  return arr.indexOf(longest);
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -27,7 +26,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   let newArr = [];
-  return arr.map((v) => {return v.charAt(0)});
+  return arr.map((v) => {
+    return v.charAt(0);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,13 +41,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   let newArr = [];
- arr.map((v) => {
-  if (v.includes(":)")) {
-    newArr.push(v);
-  }
-  // console.log(newArr);
- });
- return newArr
+  arr.map((v) => {
+    if (v.includes(":)")) {
+      newArr.push(v);
+    }
+    // console.log(newArr);
+  });
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,9 +59,9 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-return arr.map((v) => {
-  return v.substring(1, 4) + v.substring(6, 9) + v.substring(10);
-})
+  return arr.map((v) => {
+    return v.substring(1, 4) + v.substring(6, 9) + v.substring(10);
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +74,7 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   let newString = '';
-  for (let i = 1; i < str.length; i +=2) {
+  for (let i = 1; i < str.length; i += 2) {
     newString += str.charAt(i);
   }
   return newString;
@@ -93,7 +94,6 @@ const allHappy = (arr) => {
   }
   return true;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
@@ -184,7 +184,7 @@ describe('Testing challenge 1', () => {
   test('It should return an index position of the longest string', () => {
     const strArray1 = ['Ginger', 'Goose', 'Tangerine', 'Rosie', 'Mario', 'Malaki']
     const strArray2 = [];
-    const strArray3= ['Ginger']
+    const strArray3 = ['Ginger']
 
     expect(longestString(strArray1)).toStrictEqual(2);
     expect(longestString(strArray2)).toStrictEqual(-1);
