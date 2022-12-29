@@ -85,6 +85,25 @@ class LinkedList:
             else:
                 raise TargetError('Target Value is not in list')
 
+    def kth_from_end(self, k):
+        """
+        returns the nodes value that is k places from the tail of the linked list.
+        """
+        if k <0:
+            raise TargetError("k is under range")
+        lst = []
+        current = self.head
+        while current:
+            lst.append(current.value)
+            current = current.next
+        position = len(lst) - k -1
+        print(position)
+        target = lst[position]
+        if position >= 0:
+            return target
+        else:
+            raise TargetError('Target not found')
+
 class Node:
     def __init__(self, value, next=None):
         self.value = value
