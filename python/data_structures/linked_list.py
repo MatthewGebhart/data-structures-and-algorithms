@@ -12,11 +12,11 @@ class LinkedList:
         """
         Indicates whether target_value exists as a Node’s value somewhere within the list.
         """
-        start = self.head
-        while start is not None:
-            if start.value == target_value:
+        current = self.head
+        while current is not None:
+            if current.value == target_value:
                 return True
-            start = start.next
+            current = current.next
         return False
     def __str__(self):
         """
@@ -27,7 +27,7 @@ class LinkedList:
         return_string = ""
 
         while current:
-            return_string += f"{{ {current.value} }} -> "
+            return_string += f"{{ {str(current.value)} }} -> "
             current = current.next
         return_string += "NULL"
         return return_string

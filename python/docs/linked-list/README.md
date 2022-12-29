@@ -26,6 +26,7 @@ file located at ./data_structures/linked_list.py
 - Made a Linked List Class to instantiate a new linked list
 - added methods for insert, includes and "to string"
 - made a Node class to create new nodes
+- Big O is O(n) for both space and time because it will depend on how many nodes are present in the list.
 
 ## API
 LinkedList class has the following Methods available
