@@ -32,15 +32,16 @@ class LinkedList:
         return_string += "NULL"
         return return_string
 
-    def append(self, new_value):
-        """
-        adds a new node with new_value to the end of the Linked List
-        """
+
+
+    def append(self, value):
         current = self.head
-        while current.next:
-            current = current.next
-        new_node = Node(value=new_value)
-        current.next = new_node
+        if current is None:
+            self.head = Node(value, current)
+        else:
+            while current.next is not None:
+                current = current.next
+            current.next = Node(value)
 
     def insert_before(self, value, new_value):
         """
