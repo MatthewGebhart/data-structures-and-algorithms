@@ -6,7 +6,7 @@ def test_exists():
     assert PseudoQueue
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_enqueue_one():
     pq = PseudoQueue()
     pq.enqueue("apples")
