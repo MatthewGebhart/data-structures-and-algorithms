@@ -9,7 +9,7 @@ class Node:
 
 class Stack:
     """
-    Put docstring here
+    Creates Stack class
     """
 
     def __init__(self):
