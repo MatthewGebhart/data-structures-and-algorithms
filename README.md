@@ -33,3 +33,5 @@ To run your tests
 - [linked_list_zip](python%2Fdocs%2Flinked_list_zip%2FREADME.md)
 - [stack_and_queue](python%2Fdocs%2Fstack_and_queue%2FREADME.md)
 - [stack_queue_pseudo](python%2Fdocs%2Fstack_queue_pseudo%2FREADME.md)
+- [stack_queue_animal_shelter](python%2Fdocs%2Fstack_queue_animal_shelter%2FREADME.md)
+
