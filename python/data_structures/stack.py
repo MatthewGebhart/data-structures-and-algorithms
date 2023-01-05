@@ -1,4 +1,6 @@
 from data_structures.invalid_operation_error import InvalidOperationError
+
+
 class Node:
     """
     creates new Node
@@ -7,14 +9,13 @@ class Node:
         self.value = value
         self.next = next
 
+
 class Stack:
     """
     Creates Stack class
     """
-
     def __init__(self):
         self.top = None
-
 
     def push(self, value):
         if self.top is None:
@@ -28,7 +29,7 @@ class Stack:
         if self.top is None:
             raise InvalidOperationError("Method not allowed on empty collection")
         popped = self.top
-        #reassign top to be one below it
+    # reassign top to be one below it
         self.top = self.top.next
         return popped.value
 
