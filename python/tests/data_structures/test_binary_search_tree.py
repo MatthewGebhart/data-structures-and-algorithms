@@ -6,7 +6,7 @@ def test_exists():
     assert BinarySearchTree
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_instantiate_empty():
     tree = BinarySearchTree()
     actual = tree.root
@@ -23,7 +23,7 @@ def test_add_to_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_left():
     tree = BinarySearchTree()
     tree.add(10)
