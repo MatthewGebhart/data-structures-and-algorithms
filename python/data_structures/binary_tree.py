@@ -90,6 +90,17 @@ class BinaryTree:
         return nodes
 
 
+    def find_maximum_value(self):
+        if self.root is None:
+            return None
+        all_nodes = self.post_order()
+        max_val = 0
+        for num in all_nodes:
+            if num > max_val:
+                max_val = num
+        return max_val
+
+
 
 
 
