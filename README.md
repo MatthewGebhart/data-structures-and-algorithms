@@ -35,3 +35,5 @@ To run your tests
 - [stack_queue_pseudo](python%2Fdocs%2Fstack_queue_pseudo%2FREADME.md)
 - [stack_queue_animal_shelter](python%2Fdocs%2Fstack_queue_animal_shelter%2FREADME.md)
 - [stack_queue_brackets](python%2Fdocs%2Fstack_queue_brackets%2FREADME.md)
+- [tree_max](python%2Fdocs%2Ftree_max%2FREADME.md)
+- [tree_breadth_first](python%2Fdocs%2Ftree_breadth_first%2FREADME.md)
