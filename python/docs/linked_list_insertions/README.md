@@ -15,7 +15,7 @@ file located at ./data_structures/linked_list.py
     - arguments: value, new value
     - adds a new node with the given new value immediately after the first node that has the value specified
 ### Whiteboard
-![linked_list_insertions_wb.png](linked_list_insertions_wb.png)
+![linked_list_insertions_whiteboard.png](linked_list_insertions_whiteboard.png)
 new methods to add to Linked List class
 
 ## Approach & Efficiency
@@ -34,6 +34,11 @@ LinkedList class now has the following Methods available
 - insert before `insert_before(value, new value)`adds a new node with the given new value immediately before the first node that has the value specified
 - insert after `insert_after(value, new value)`adds a new node with the given new value immediately after the first node that has the value specified
 
+## Solution
+
+this is a linked - list data structure and can not be run alone, it can be incorporated into other products as a module with the following import
+`from data_structures.linked_list import LinkedList`
+
 ## Testing
 - test to prove the following functionality:
   - Can successfully add a node to the end of the linked list
@@ -45,5 +50,4 @@ LinkedList class now has the following Methods available
 
 all tests are passing
 
-
-- Tests are accessed in ./tests/data_structures/test_linked_list_insertions.py
+- Tests are accessed in ./tests/code_challenges/test_linked_list_insertions.py
