@@ -16,8 +16,8 @@ def test_input_list():
 
 # @pytest.mark.skip("TODO")
 def test_reverse():
-    actual = insertion_sort([20, 18, 12, 8, 5, -2])
-    expected = [-2, 5, 8, 12, 18, 20]
+    actual = insertion_sort([27, 18, 12, 8, 5, -2])
+    expected = [-2, 5, 8, 12, 18, 27]
     assert actual == expected
 
 
