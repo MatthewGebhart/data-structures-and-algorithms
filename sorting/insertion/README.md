@@ -9,5 +9,6 @@ Insertion sort is an algorithm that sorts a list. It iterates through the list a
 
 ## Solution and Tests
 The Solution can be found at sorting/insertion/insertion_sort.py
+tests can be found at sorting/insertion/test_insertion_sort.py
 
 

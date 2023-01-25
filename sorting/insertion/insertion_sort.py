@@ -11,3 +11,6 @@ def insertion_sort(list):
     return list
 
 
+if __name__ == "__main__":
+    insertion_sort(sample_list)
+    print(sample_list)
