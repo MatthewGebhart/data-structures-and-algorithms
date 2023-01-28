@@ -37,3 +37,6 @@ To run your tests
 - [stack_queue_brackets](python%2Fdocs%2Fstack_queue_brackets%2FREADME.md)
 - [tree_max](python%2Fdocs%2Ftree_max%2FREADME.md)
 - [tree_breadth_first](python%2Fdocs%2Ftree_breadth_first%2FREADME.md)
+- [insertion_sort](sorting%2Finsertion%2FREADME.md)
+- [merge_sort](sorting%2Fmerge%2FREADME.md)
+- [hashtable](python%2Fdocs%2Fhashtable%2FREADME.md)
