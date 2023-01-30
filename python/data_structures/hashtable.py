@@ -40,57 +40,82 @@ class LinkedList:
 
 
 class Hashtable:
-    def __init__(self, size=10):
+    def __init__(self, size=1024):
         self.size = size
-        self._buckets = [[] for x in range(self.size)]
-
-    # The hashing algorithm
-    def hash(self, key):
-        """
-        Takes in a string called the 'key',
-        and returns a integer representing an
-        index of _buckets
-        """
-        return hash(key) % self.size
-
+        self._buckets = [None] * size
 
     def set(self, key, value):
         """
         Given a key - value pair, hash the key,
         and insert the pair into the correct bucket
         """
-        index = self.hash(key)
-        found = False
-        for i, kv in enumerate(self._buckets[index]):
-            if kv[0] == key:
-                self._buckets[index][i] = (key, value)
-                found = True
-                break
-        if not found:
-            self._buckets[index].append((key, value))
+        hashed_key = self.hash(key)
+
+        if self._buckets[hashed_key] is None:
+            self._buckets[hashed_key] = LinkedList()
+            self._buckets[hashed_key].insert([key, value])
+        # self._buckets[hashed_key] is a LinkedList
+        else:
+            self._buckets[hashed_key].insert([key, value])
+
     def get(self, key):
         """
         Given a key, return the value. If the key doesn't
         exist raise an error
         """
-        index = self.hash(key)
-        for kv in self._buckets[index]:
-            if kv[0] == key:
-                return kv[1]
-        return None
+        # index = self.hash(key)
+        # for kv in self._buckets[index]:
+        #     if kv[0] == key:
+        #         return kv[1]
+        # return None
+
+        hashed_key = self.hash(key)
+
+        bucket = self._buckets[hashed_key]
+
+        # We have a LinkedList!
+        current = bucket.head
+
+        # traverse our linkedlist
+        while current:
+            if current.value[0] == key:
+                return current.value[1]
+            current = current.next
+
+        raise KeyError(f"Key not found: {key}")
     def has(self, key):
-        index = self.hash(key)
-        for kv in self._buckets[index]:
-            if kv[0] == key:
-                return True
-        return False
+       if self.get(key):
+           return True
+       else:
+           return False
+
 
     def keys(self):
         keys = []
         for bucket in self._buckets:
-            for key_value in bucket:
-                keys.append(key_value[0])
+            if bucket is not None:
+                current = bucket.head
+                while current:
+                    keys.append(current.value[0])
+                    current = current.next
         return keys
+
+        # The hashing algorithm
+    def hash(self, key):
+        """
+        Takes in a string called the 'key',
+        and returns a integer representing an
+        index of _buckets
+        """
+        hash = 0
+
+        for char in key:
+            hash += ord(char)
+
+        # hash represents the index of the bucket in the hashtable
+        hash = (hash * 19) % self.size
+
+        return hash
 
 
 if __name__ == "__main__":
