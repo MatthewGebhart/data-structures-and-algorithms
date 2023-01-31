@@ -40,3 +40,4 @@ To run your tests
 - [insertion_sort](sorting%2Finsertion%2FREADME.md)
 - [merge_sort](sorting%2Fmerge%2FREADME.md)
 - [hashtable](python%2Fdocs%2Fhashtable%2FREADME.md)
+- [hashtable_repeated_words](python%2Fdocs%2Fhashtable_repeated_word%2FREADME.md)
