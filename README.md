@@ -41,3 +41,4 @@ To run your tests
 - [merge_sort](sorting%2Fmerge%2FREADME.md)
 - [hashtable](python%2Fdocs%2Fhashtable%2FREADME.md)
 - [hashtable_repeated_words](python%2Fdocs%2Fhashtable_repeated_word%2FREADME.md)
+- [tree_intersection](python%2Fdocs%2Ftree_intersection%2FREADME.md)
